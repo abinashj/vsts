@@ -31,7 +31,7 @@ jobs:
 
   - task: PublishTestResults@2
     inputs:
-      testResultsFiles: '/junit/test-results.xml'
+      testResultsFiles: '/home/vsts/work/1/s/junit/test-results.xml'
       testRunTitle: 'Python $(python.version)'
     condition: succeededOrFailed()
 

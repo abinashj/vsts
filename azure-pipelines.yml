@@ -24,9 +24,9 @@ jobs:
   - script: python -m pip install --upgrade pip
     displayName: 'Install dependencies'
 
-  - script: |
+  - script: python hello/hello.py
       pip install pytest
-      pytest tests --doctest-modules --junitxml=junit/test-results.xml
+      pytest test --doctest-modules --junitxml=junit/test-results.xml
     displayName: 'test with pytest'
 
   - task: PublishTestResults@2

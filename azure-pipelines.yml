@@ -46,5 +46,5 @@ jobs:
       versionSpec: '3.x'
       architecture: 'x64'
 
-  - script: python setup.py sdist
+  - script: 
     displayName: 'Build sdist'

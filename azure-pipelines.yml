@@ -26,12 +26,12 @@ jobs:
 
   - script: |
       pip install pytest
-      pytest tests --doctest-modules --junitxml=test-results.xml
-    displayName: 'pytest'
+      pytest tests --doctest-modules --junitxml=junit/test-results.xml
+    displayName: 'test with pytest'
 
   - task: PublishTestResults@2
     inputs:
-      
+      testResultsFiles: '**/test-*.xml'
       testRunTitle: 'Python $(python.version)'
     condition: succeededOrFailed()
 
